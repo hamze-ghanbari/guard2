@@ -1,0 +1,25 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">img </th>
+        <th scope="col">album art</th>
+        <th scope="col">year</th>
+        <th scope="col">songs</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let a of albums;">
+        <th scope="row">{{a.id}}</th>
+        <td><a [routerLink]="['/album',a.id]"><img [src]="a.name" /></a></td>
+        <td>{{a.albumArt}}</td>
+        <td>{{a.year}}</td>
+        <td *ngFor="let s of a.songs">
+        
+           <p>{{s.name}}</p>
+      
+        </td>
+      </tr>
+     
+    </tbody>
+  </table>

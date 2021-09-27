@@ -1,0 +1,17 @@
+<div class="card" style="width: 18rem;">
+  <img [src]="album.name" class="card-img-top" alt="..." />
+  <div class="card-body">
+    <h5 class="card-title">{{album.albumArt}}</h5>
+    <p class="card-text">{{album.year}}</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item" *ngFor="let s of album.songs">
+      <span class="bg-danger p-1 text-white">{{s.trackNumer}}</span>
+      <span>{{s.name}}</span>
+      <span class="bg-success p-1 text-white">{{s.duration}}</span>
+    </li>
+ 
+  </ul>
+  
+</div>
+<p>{{showmessage}}</p>
